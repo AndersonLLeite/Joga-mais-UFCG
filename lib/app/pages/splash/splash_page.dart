@@ -76,7 +76,7 @@ class _SplashPageState extends SplashViewImpl {
                     horizontal: MediaQuery.of(context).size.width * 0.12),
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.of(context).pushNamed('/auth/login');
+                    Navigator.of(context).pushNamed('/login');
                   },
                   style: ButtonStyles.instance.primaryButton,
                   child: Row(
@@ -95,17 +95,12 @@ class _SplashPageState extends SplashViewImpl {
                   ),
                 ),
               ),
-          
             ]),
           ),
-          
           SliverFillRemaining(
             hasScrollBody: false,
             child: Column(
-              children: const [
-                Spacer(),
-                TextRichRegister()
-              ],
+              children: const [Spacer(), TextRichRegister()],
             ),
           )
         ],
@@ -113,5 +108,3 @@ class _SplashPageState extends SplashViewImpl {
     );
   }
 }
-
-

@@ -1,18 +1,25 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+
 import 'package:joga_mais_ufcg/app/core/ui/styles/button_styles.dart';
 import 'package:joga_mais_ufcg/app/core/ui/styles/colors_app.dart';
 import 'package:joga_mais_ufcg/app/core/ui/styles/text_styles.dart';
 import 'package:joga_mais_ufcg/app/core/ui/widgets/text_rich_register.dart';
+import 'package:joga_mais_ufcg/app/pages/login/view/login_view_impl.dart';
+import 'package:joga_mais_ufcg/app/pages/splash/presenter/splash_presenter.dart';
 
 class LoginPage extends StatefulWidget {
-  const LoginPage({Key? key}) : super(key: key);
+  final SplashPresenter presenter;
+  const LoginPage({
+    Key? key,
+    required this.presenter,
+  }) : super(key: key);
 
   @override
   State<LoginPage> createState() => _LoginPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _LoginPageState extends LoginViewImpl {
   final ecEmail = TextEditingController();
   final ecPassword = TextEditingController();
 
@@ -100,6 +107,7 @@ class _LoginPageState extends State<LoginPage> {
                     padding: const EdgeInsets.symmetric(
                         vertical: 10, horizontal: 47),
                     child: TextFormField(
+                      obscureText: true,
                       decoration: InputDecoration(
                         label: Text(
                           'Digite aqui sua senha',
