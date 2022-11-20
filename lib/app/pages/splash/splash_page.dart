@@ -61,12 +61,12 @@ class _SplashPageState extends SplashViewImpl {
               ),
               Padding(
                 padding: EdgeInsets.symmetric(
-                    horizontal: MediaQuery.of(context).size.width * 0.1),
+                    horizontal: MediaQuery.of(context).size.width * 0.12),
                 child: ElevatedButton(
                   onPressed: () {},
                   style: ButtonStyles.instance.secondaryButton,
                   child: Text(
-                    ' 👀 Dar uma olhadinha nas quadras',
+                    '👀 Dar uma olhadinha nas quadras',
                     style: TextStyles.instance.textTitleButton,
                   ),
                 ),
@@ -76,7 +76,7 @@ class _SplashPageState extends SplashViewImpl {
                     horizontal: MediaQuery.of(context).size.width * 0.12),
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.of(context).pushNamed('/login');
+                    Navigator.of(context).pushNamed('/auth/login');
                   },
                   style: ButtonStyles.instance.primaryButton,
                   child: Row(

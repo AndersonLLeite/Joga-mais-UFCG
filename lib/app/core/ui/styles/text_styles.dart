@@ -56,4 +56,9 @@ class TextStyles {
       fontWeight: FontWeight.w400,
       fontFamily: primaryFont,
       color: ColorsApp.instance.whiteText);
+  
+  TextStyle get textTitleCheckBox => TextStyle(
+      fontWeight: FontWeight.w400,
+      fontFamily: primaryFont,
+      color: ColorsApp.instance.whiteText);
 }
