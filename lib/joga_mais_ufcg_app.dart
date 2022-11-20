@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_getit/flutter_getit.dart';
 import 'package:joga_mais_ufcg/app/core/ui/theme/theme_config.dart';
-import 'package:joga_mais_ufcg/app/pages/login/view/login_route.dart';
+import 'package:joga_mais_ufcg/app/pages/auth/login/login_route.dart';
+import 'package:joga_mais_ufcg/app/pages/senddocs/view/send_docs_route.dart';
 
+import 'app/pages/auth/register/register_route.dart';
 import 'app/pages/home/home_page.dart';
-import 'app/pages/login/login_page.dart';
+import 'app/pages/auth/login/login_page.dart';
 import 'app/pages/splash/view/splash_route.dart';
 
 class JogaMaisUfcgApp extends StatelessWidget {
@@ -20,8 +22,9 @@ class JogaMaisUfcgApp extends StatelessWidget {
         theme: ThemeConfig.theme,
         routes: {
           '/': (_) => const SplashRoute(),
-          '/login': (_) => LoginRoute(),
-          //'/auth/register': (_) => const RegisterRoute(),
+          '/auth/login': (_) => LoginRoute(),
+          '/auth/register': (_) => const RegisterRoute(),
+          '/senddocs': (_) => SendDocsRoute(),
           '/home': (_) => const HomePage()
         },
       ),
