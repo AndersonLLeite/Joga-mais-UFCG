@@ -155,6 +155,7 @@ class _LoginPageState extends LoginViewImpl {
                                   recognizer: TapGestureRecognizer()
                                     ..onTap = () => Navigator.of(context)
                                         .pushNamed('/auth/redefine'))
+                                        //TODO Redefinir senha
                             ]),
                       ),
                     ),

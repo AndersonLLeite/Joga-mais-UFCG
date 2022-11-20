@@ -26,7 +26,7 @@ class RegisterPage extends StatefulWidget {
 class _RegisterPageState extends RegisterViewImpl {
   final emailEC = TextEditingController();
   final nameEC = TextEditingController();
-  final whatsAppumberEC = TextEditingController();
+  final whatsAppNumberEC = TextEditingController();
   final passwordEC = TextEditingController();
   final repeatPassworwEC = TextEditingController();
   final formKey = GlobalKey<FormState>();
@@ -41,7 +41,7 @@ class _RegisterPageState extends RegisterViewImpl {
   void dispose() {
     emailEC.dispose();
     nameEC.dispose();
-    whatsAppumberEC.dispose();
+    whatsAppNumberEC.dispose();
     passwordEC.dispose();
     repeatPassworwEC.dispose();
 
@@ -93,6 +93,7 @@ class _RegisterPageState extends RegisterViewImpl {
                     padding: const EdgeInsets.symmetric(
                         vertical: 10, horizontal: 47),
                     child: TextFormField(
+                      controller: emailEC,
                       validator: Validatorless.multiple([
                         Validatorless.required('Obrigatório'),
                         Validatorless.email('Email inválido')
@@ -130,6 +131,7 @@ class _RegisterPageState extends RegisterViewImpl {
                     padding: const EdgeInsets.symmetric(
                         vertical: 10, horizontal: 47),
                     child: TextFormField(
+                      controller: nameEC,
                       validator: Validatorless.multiple([
                         Validatorless.required("Obrigatório"),
                       ]),
@@ -167,14 +169,15 @@ class _RegisterPageState extends RegisterViewImpl {
                     padding: const EdgeInsets.symmetric(
                         vertical: 10, horizontal: 47),
                     child: TextFormField(
+                      controller: whatsAppNumberEC,
                       validator: Validatorless.multiple([
                         Validatorless.required("Obrigatório"),
                         Validatorless.number('Número de telefone inválido')
                       ]),
-                      obscureText: true,
                       decoration: InputDecoration(
                         label: Text(
-                          '(83) 9 1122-3344',
+                          //TODO Verificar forma como o backend quer receber esse dado
+                          '(83)91122-3344',
                           style: TextStyles.instance.labelForm,
                         ),
                         fillColor: Colors.transparent,
@@ -205,6 +208,7 @@ class _RegisterPageState extends RegisterViewImpl {
                     padding: const EdgeInsets.symmetric(
                         vertical: 10, horizontal: 47),
                     child: TextFormField(
+                      controller: passwordEC,
                       validator: Validatorless.multiple([
                         Validatorless.required("Obrigatório"),
                         Validatorless.min(
@@ -244,6 +248,7 @@ class _RegisterPageState extends RegisterViewImpl {
                     padding: const EdgeInsets.symmetric(
                         vertical: 10, horizontal: 47),
                     child: TextFormField(
+                      controller: repeatPassworwEC,
                       validator: Validatorless.multiple([
                         Validatorless.required("Obrigatório"),
                         Validatorless.min(
@@ -309,10 +314,7 @@ class _RegisterPageState extends RegisterViewImpl {
                 onPressed: () {
                   final validForm = formKey.currentState?.validate() ?? false;
                   if (validForm) {
-                    widget.presenter.login(
-                      emailEC.text,
-                      passwordEC.text,
-                    );
+                    Navigator.of(context).pushNamed('/senddocs');
                   }
                 },
                 style: ButtonStyles.instance.primaryButton,
