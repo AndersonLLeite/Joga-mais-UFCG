@@ -16,6 +16,7 @@ class ColorsApp {
   Color get blue => const Color(0xFF38B6FF);
   Color get greyText => const Color(0xFFC8C8C8);
   Color get red => const Color(0xFFCB6060);
+  Color get greyInputText => const Color(0xFFBEBEBE);
 }
 
 extension ColorAppExtension on BuildContext {
