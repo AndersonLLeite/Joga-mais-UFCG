@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_getit/flutter_getit.dart';
 import 'package:joga_mais_ufcg/app/core/ui/theme/theme_config.dart';
 import 'package:joga_mais_ufcg/app/pages/auth/login/login_route.dart';
-import 'package:joga_mais_ufcg/app/pages/senddocs/view/send_docs_route.dart';
+import 'package:joga_mais_ufcg/app/pages/docs/docsfirstpage/docs_first_page_route.dart';
+import 'package:joga_mais_ufcg/app/pages/docs/docssecondpage/docs_second_page_route.dart';
 
 import 'app/pages/auth/register/register_route.dart';
 import 'app/pages/home/home_page.dart';
@@ -22,9 +23,10 @@ class JogaMaisUfcgApp extends StatelessWidget {
         theme: ThemeConfig.theme,
         routes: {
           '/': (_) => const SplashRoute(),
-          '/auth/login': (_) => LoginRoute(),
+          '/auth/login': (_) => const LoginRoute(),
           '/auth/register': (_) => const RegisterRoute(),
-          '/senddocs': (_) => SendDocsRoute(),
+          '/docs/docsfirstpage': (_) => const DocsFirstPageRoute(),
+          '/docs/docssecondpage': (_) => const DocsSecondPageRoute(),
           '/home': (_) => const HomePage()
         },
       ),

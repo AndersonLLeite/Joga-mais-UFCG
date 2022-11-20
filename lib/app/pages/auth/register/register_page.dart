@@ -344,7 +344,7 @@ class _RegisterPageState extends RegisterViewImpl {
                 onPressed: () {
                   final validForm = formKey.currentState?.validate() ?? false;
                   if (validForm) {
-                    Navigator.of(context).pushNamed('/senddocs');
+                    Navigator.of(context).pushNamed('/docs/docsfirstpage');
                   }
                 },
                 style: ButtonStyles.instance.primaryButton,
