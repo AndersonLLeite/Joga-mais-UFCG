@@ -7,6 +7,7 @@ import 'package:joga_mais_ufcg/app/core/ui/styles/text_styles.dart';
 import 'package:joga_mais_ufcg/app/core/ui/widgets/text_rich_register.dart';
 import 'package:joga_mais_ufcg/app/pages/login/view/login_view_impl.dart';
 import 'package:joga_mais_ufcg/app/pages/splash/presenter/splash_presenter.dart';
+import 'package:validatorless/validatorless.dart';
 
 class LoginPage extends StatefulWidget {
   final SplashPresenter presenter;
@@ -20,13 +21,14 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends LoginViewImpl {
-  final ecEmail = TextEditingController();
-  final ecPassword = TextEditingController();
+  final emailEC = TextEditingController();
+  final passwordEC = TextEditingController();
+  final formKey = GlobalKey<FormState>();
 
   @override
   void dispose() {
-    ecEmail.dispose();
-    ecPassword.dispose();
+    emailEC.dispose();
+    passwordEC.dispose();
     super.dispose();
   }
 
@@ -39,6 +41,7 @@ class _LoginPageState extends LoginViewImpl {
           SliverList(
               delegate: SliverChildListDelegate.fixed([
             Form(
+              key: formKey,
               child: Column(
                 children: [
                   const SizedBox(
@@ -74,6 +77,10 @@ class _LoginPageState extends LoginViewImpl {
                     padding: const EdgeInsets.symmetric(
                         vertical: 10, horizontal: 47),
                     child: TextFormField(
+                      validator: Validatorless.multiple([
+                        Validatorless.required('Obrigatório'),
+                        Validatorless.email('Email inválido')
+                      ]),
                       decoration: InputDecoration(
                         label: Text(
                           'seumelhor@gmail.com',
@@ -107,6 +114,11 @@ class _LoginPageState extends LoginViewImpl {
                     padding: const EdgeInsets.symmetric(
                         vertical: 10, horizontal: 47),
                     child: TextFormField(
+                      validator: Validatorless.multiple([
+                        Validatorless.required("Obrigatório"),
+                        Validatorless.min(
+                            6, 'Tem que ter pelo menos 6 caracteres')
+                      ]),
                       obscureText: true,
                       decoration: InputDecoration(
                         label: Text(
@@ -153,7 +165,17 @@ class _LoginPageState extends LoginViewImpl {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 47, vertical: 25),
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  final validForm =
+                          formKey.currentState?.validate() ?? false;
+                      if (validForm) {
+                        
+                        widget.presenter.login(
+                          emailEC.text,
+                          passwordEC.text,
+                        );
+                      }
+                },
                 style: ButtonStyles.instance.primaryButton,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -175,4 +197,6 @@ class _LoginPageState extends LoginViewImpl {
       ),
     );
   }
+  
+
 }
