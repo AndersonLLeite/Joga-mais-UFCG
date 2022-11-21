@@ -154,8 +154,8 @@ class _LoginPageState extends LoginViewImpl {
                                       .copyWith(fontSize: 16),
                                   recognizer: TapGestureRecognizer()
                                     ..onTap = () => Navigator.of(context)
-                                        .pushNamed('/auth/redefine'))
-                                        //TODO Redefinir senha
+                                        .pushNamed('/auth/redefinePassword'))
+                                        
                             ]),
                       ),
                     ),

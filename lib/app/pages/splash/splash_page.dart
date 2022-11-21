@@ -21,8 +21,6 @@ class SplashPage extends StatefulWidget {
 }
 
 class _SplashPageState extends SplashViewImpl {
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -64,7 +62,9 @@ class _SplashPageState extends SplashViewImpl {
                 padding: EdgeInsets.symmetric(
                     horizontal: MediaQuery.of(context).size.width * 0.12),
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    //TODO redirecionar para quadras
+                  },
                   style: ButtonStyles.instance.secondaryButton,
                   child: Text(
                     '👀 Dar uma olhadinha nas quadras',
@@ -74,7 +74,8 @@ class _SplashPageState extends SplashViewImpl {
               ),
               Padding(
                 padding: EdgeInsets.symmetric(
-                    horizontal: MediaQuery.of(context).size.width * 0.12),
+                    horizontal: MediaQuery.of(context).size.width * 0.12,
+                    vertical: 10),
                 child: ElevatedButton(
                   onPressed: () {
                     Navigator.of(context).pushNamed('/auth/login');
