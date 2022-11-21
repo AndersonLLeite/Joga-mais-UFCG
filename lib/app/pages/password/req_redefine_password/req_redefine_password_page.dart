@@ -1,25 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:joga_mais_ufcg/app/core/ui/styles/button_styles.dart';
 
-import 'package:joga_mais_ufcg/app/pages/redefine_password/presenter/redefine_password_presenter.dart';
-import 'package:joga_mais_ufcg/app/pages/redefine_password/view/redefine_password_view_impl.dart';
+import 'package:joga_mais_ufcg/app/pages/password/req_redefine_password/presenter/req_redefine_password_presenter.dart';
+import 'package:joga_mais_ufcg/app/pages/password/req_redefine_password/view/req_redefine_password_view_impl.dart';
 import 'package:validatorless/validatorless.dart';
 
-import '../../core/ui/styles/text_styles.dart';
+import '../../../core/ui/styles/text_styles.dart';
 
-class RedefinePasswordPage extends StatefulWidget {
-  final RedefinePasswordPresenter presenter;
+class ReqRedefinePasswordPage extends StatefulWidget {
+  final ReqRedefinePasswordPresenter presenter;
 
-  const RedefinePasswordPage({
+  const ReqRedefinePasswordPage({
     Key? key,
     required this.presenter,
   }) : super(key: key);
 
   @override
-  State<RedefinePasswordPage> createState() => _RedefinePasswordPageState();
+  State<ReqRedefinePasswordPage> createState() =>
+      _ReqRedefinePasswordPageState();
 }
 
-class _RedefinePasswordPageState extends RedefinePasswordViewImpl {
+class _ReqRedefinePasswordPageState extends ReqRedefinePasswordViewImpl {
   final emailEC = TextEditingController();
   final formKey = GlobalKey<FormState>();
   final double marginRight = 0.1;
