@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_getit/flutter_getit.dart';
 import 'package:joga_mais_ufcg/app/core/ui/theme/theme_config.dart';
 import 'package:joga_mais_ufcg/app/pages/auth/login/login_route.dart';
+import 'package:joga_mais_ufcg/app/pages/confirmations/confirm_req_redefine_password/confirm_req_redefine_password_page.dart';
+import 'package:joga_mais_ufcg/app/pages/confirmations/confirm_req_register/confirm_req_register_page.dart';
 import 'package:joga_mais_ufcg/app/pages/docs/docsfirstpage/docs_first_page_route.dart';
 import 'package:joga_mais_ufcg/app/pages/docs/docssecondpage/docs_second_page_route.dart';
+import 'package:joga_mais_ufcg/app/pages/redefine_password/redefine_password_route.dart';
 
 import 'app/pages/auth/register/register_route.dart';
 import 'app/pages/home/home_page.dart';
@@ -22,7 +25,11 @@ class JogaMaisUfcgApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: ThemeConfig.theme,
         routes: {
-          '/': (_) => const SplashRoute(),
+          //'/': (_) => const SplashRoute(),
+          '/': (_) => const ConfirmReqRedefinePasswordPage(),
+          '/confirmReqRedefinePassword': (_) => const ConfirmReqRedefinePasswordPage(),
+          '/redefinePassword': (_) => const RedefinePasswordRoute(),
+          '/confirmReqRegister': (_) => const ConfirmReqRegisterPage(),
           '/auth/login': (_) => const LoginRoute(),
           '/auth/register': (_) => const RegisterRoute(),
           '/docs/docsfirstpage': (_) => const DocsFirstPageRoute(),

@@ -163,7 +163,7 @@ class _DocsSecondPageState extends DocsSecondPageViewImpl {
                       final validForm =
                           formKey.currentState?.validate() ?? false;
                       if (validForm) {
-                        Navigator.of(context).pushNamed('/confirm');
+                        Navigator.of(context).pushNamed('/confirmReqRegister');
                       }
                     },
                     style: ButtonStyles.instance.primaryButton,
