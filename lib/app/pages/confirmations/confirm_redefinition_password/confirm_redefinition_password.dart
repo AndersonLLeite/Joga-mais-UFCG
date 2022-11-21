@@ -1,18 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:joga_mais_ufcg/app/core/ui/styles/text_styles.dart';
 
 import '../../../core/ui/styles/button_styles.dart';
+import '../../../core/ui/styles/text_styles.dart';
 
-class ConfirmReqRegisterPage extends StatefulWidget {
-  const ConfirmReqRegisterPage({Key? key}) : super(key: key);
+class ConfirmRedefinitionPassword extends StatelessWidget {
+  const ConfirmRedefinitionPassword({Key? key}) : super(key: key);
 
-  @override
-  State<ConfirmReqRegisterPage> createState() => _ConfirmReqRegisterPageState();
-}
-
-class _ConfirmReqRegisterPageState extends State<ConfirmReqRegisterPage> {
   final double marginLeft = 0.1;
+
   final double marginRigth = 0.1;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,7 +32,7 @@ class _ConfirmReqRegisterPageState extends State<ConfirmReqRegisterPage> {
                   left: MediaQuery.of(context).size.width * marginLeft,
                   bottom: 10),
               child: Text(
-                'Boaa, seu cadastro está pendente de confirmação!',
+                'Show de bola, deu bom!',
                 textAlign: TextAlign.center,
                 style:
                     TextStyles.instance.textTitlePrimary.copyWith(fontSize: 20),
@@ -47,7 +44,7 @@ class _ConfirmReqRegisterPageState extends State<ConfirmReqRegisterPage> {
                   left: MediaQuery.of(context).size.width * marginLeft,
                   bottom: 40),
               child: Text(
-                'Fique de olho no seu email, vamos te avisar por lá assim que ele for aprovado!',
+                'A sua senha foi redefinida com sucesso,você já pode realizar login com as novas credenciais.',
                 textAlign: TextAlign.center,
                 style: TextStyles.instance.textSubTitleSecondary
                     .copyWith(fontSize: 16),
@@ -59,17 +56,24 @@ class _ConfirmReqRegisterPageState extends State<ConfirmReqRegisterPage> {
               child: Image.asset('assets/images/undraw_confirmed.png'),
             ),
             Padding(
-              padding: EdgeInsets.symmetric(
-                  horizontal: MediaQuery.of(context).size.width * 0.12,
-                  vertical: 50),
+              padding: EdgeInsets.only(
+                  top: 40,
+                  left: MediaQuery.of(context).size.width * marginLeft,
+                  right: MediaQuery.of(context).size.width * marginRigth),
               child: ElevatedButton(
                 onPressed: () {
-                  //TODO redirecionar para quadras
+                  Navigator.of(context).popAndPushNamed('/auth/login');
                 },
                 style: ButtonStyles.instance.secondaryButton,
-                child: Text(
-                  '👀 Dar uma olhadinha nas quadras',
-                  style: TextStyles.instance.textTitleButton,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Icon(Icons.arrow_back),
+                    Text(
+                      ' Voltar para a tela de login',
+                      style: TextStyles.instance.textTitleButton,
+                    ),
+                  ],
                 ),
               ),
             ),
