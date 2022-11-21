@@ -1,4 +1,3 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:joga_mais_ufcg/app/core/ui/styles/button_styles.dart';
 import 'package:joga_mais_ufcg/app/core/ui/styles/text_styles.dart';
@@ -22,6 +21,8 @@ class SplashPage extends StatefulWidget {
 }
 
 class _SplashPageState extends SplashViewImpl {
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -30,6 +30,9 @@ class _RegisterPageState extends RegisterViewImpl {
   final passwordEC = TextEditingController();
   final repeatPassworwEC = TextEditingController();
   final formKey = GlobalKey<FormState>();
+  final double marginLeft = 0.11;
+  final double marginRigth = 0.11;
+
   bool checkBox = false;
   void setStateCheckBox(bool value) {
     setState(() {
@@ -80,7 +83,9 @@ class _RegisterPageState extends RegisterViewImpl {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 47),
+                    padding: EdgeInsets.only(
+                        right: MediaQuery.of(context).size.width * marginRigth,
+                        left: MediaQuery.of(context).size.width * marginLeft),
                     child: Align(
                         alignment: Alignment.bottomLeft,
                         child: Text(
@@ -90,8 +95,11 @@ class _RegisterPageState extends RegisterViewImpl {
                         )),
                   ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(
-                        vertical: 10, horizontal: 47),
+                    padding: EdgeInsets.only(
+                        right: MediaQuery.of(context).size.width * marginRigth,
+                        left: MediaQuery.of(context).size.width * marginLeft,
+                        top: 10,
+                        bottom: 10),
                     child: TextFormField(
                       controller: emailEC,
                       validator: Validatorless.multiple([
@@ -117,8 +125,10 @@ class _RegisterPageState extends RegisterViewImpl {
                     ),
                   ),
                   Padding(
-                    padding:
-                        const EdgeInsets.only(left: 47, right: 47, top: 13),
+                    padding: EdgeInsets.only(
+                        right: MediaQuery.of(context).size.width * marginRigth,
+                        left: MediaQuery.of(context).size.width * marginLeft,
+                        top: 13),
                     child: Align(
                         alignment: Alignment.bottomLeft,
                         child: Text(
@@ -128,14 +138,16 @@ class _RegisterPageState extends RegisterViewImpl {
                         )),
                   ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(
-                        vertical: 10, horizontal: 47),
+                    padding: EdgeInsets.only(
+                        right: MediaQuery.of(context).size.width * marginRigth,
+                        left: MediaQuery.of(context).size.width * marginLeft,
+                        top: 10,
+                        bottom: 10),
                     child: TextFormField(
                       controller: nameEC,
                       validator: Validatorless.multiple([
                         Validatorless.required("Obrigatório"),
                       ]),
-                      obscureText: true,
                       decoration: InputDecoration(
                         label: Text(
                           'Jão da Silva',
@@ -155,8 +167,10 @@ class _RegisterPageState extends RegisterViewImpl {
                     ),
                   ),
                   Padding(
-                    padding:
-                        const EdgeInsets.only(left: 47, right: 47, top: 13),
+                    padding: EdgeInsets.only(
+                        right: MediaQuery.of(context).size.width * marginRigth,
+                        left: MediaQuery.of(context).size.width * marginLeft,
+                        top: 13),
                     child: Align(
                         alignment: Alignment.bottomLeft,
                         child: Text(
@@ -166,8 +180,11 @@ class _RegisterPageState extends RegisterViewImpl {
                         )),
                   ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(
-                        vertical: 10, horizontal: 47),
+                    padding: EdgeInsets.only(
+                        right: MediaQuery.of(context).size.width * marginRigth,
+                        left: MediaQuery.of(context).size.width * marginLeft,
+                        top: 10,
+                        bottom: 10),
                     child: TextFormField(
                       controller: whatsAppNumberEC,
                       validator: Validatorless.multiple([
@@ -194,8 +211,10 @@ class _RegisterPageState extends RegisterViewImpl {
                     ),
                   ),
                   Padding(
-                    padding:
-                        const EdgeInsets.only(left: 47, right: 47, top: 13),
+                    padding: EdgeInsets.only(
+                        right: MediaQuery.of(context).size.width * marginRigth,
+                        left: MediaQuery.of(context).size.width * marginLeft,
+                        top: 13),
                     child: Align(
                         alignment: Alignment.bottomLeft,
                         child: Text(
@@ -205,8 +224,11 @@ class _RegisterPageState extends RegisterViewImpl {
                         )),
                   ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(
-                        vertical: 10, horizontal: 47),
+                    padding: EdgeInsets.only(
+                        right: MediaQuery.of(context).size.width * marginRigth,
+                        left: MediaQuery.of(context).size.width * marginLeft,
+                        top: 10,
+                        bottom: 10),
                     child: TextFormField(
                       controller: passwordEC,
                       validator: Validatorless.multiple([
@@ -234,8 +256,10 @@ class _RegisterPageState extends RegisterViewImpl {
                     ),
                   ),
                   Padding(
-                    padding:
-                        const EdgeInsets.only(left: 47, right: 47, top: 13),
+                    padding: EdgeInsets.only(
+                        right: MediaQuery.of(context).size.width * marginRigth,
+                        left: MediaQuery.of(context).size.width * marginLeft,
+                        top: 13),
                     child: Align(
                         alignment: Alignment.bottomLeft,
                         child: Text(
@@ -245,8 +269,11 @@ class _RegisterPageState extends RegisterViewImpl {
                         )),
                   ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(
-                        vertical: 10, horizontal: 47),
+                    padding: EdgeInsets.only(
+                        right: MediaQuery.of(context).size.width * marginRigth,
+                        left: MediaQuery.of(context).size.width * marginLeft,
+                        top: 10,
+                        bottom: 10),
                     child: TextFormField(
                       controller: repeatPassworwEC,
                       validator: Validatorless.multiple([
@@ -309,12 +336,15 @@ class _RegisterPageState extends RegisterViewImpl {
               ],
             ),
             Padding(
-              padding: const EdgeInsets.only(right: 47, left: 47, bottom: 25),
+              padding: EdgeInsets.only(
+                  right: MediaQuery.of(context).size.width * marginRigth,
+                  left: MediaQuery.of(context).size.width * marginLeft,
+                  bottom: 25),
               child: ElevatedButton(
                 onPressed: () {
                   final validForm = formKey.currentState?.validate() ?? false;
                   if (validForm) {
-                    Navigator.of(context).pushNamed('/senddocs');
+                    Navigator.of(context).pushNamed('/docs/docsfirstpage');
                   }
                 },
                 style: ButtonStyles.instance.primaryButton,

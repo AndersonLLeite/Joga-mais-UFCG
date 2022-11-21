@@ -7,6 +7,8 @@ import 'presenter/login_presenter.dart';
 import 'presenter/login_presenter_impl.dart';
 
 class LoginRoute extends FlutterGetItPageRoute{
+  const LoginRoute({super.key});
+
   @override
   List<Bind<Object>> get bindings =>
       [Bind.lazySingleton<LoginPresenter>((i) => LoginPresenterImpl())];

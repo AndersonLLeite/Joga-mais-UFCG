@@ -24,6 +24,8 @@ class _LoginPageState extends LoginViewImpl {
   final emailEC = TextEditingController();
   final passwordEC = TextEditingController();
   final formKey = GlobalKey<FormState>();
+  final double marginLeft = 0.11;
+  final double marginRigth = 0.11;
 
   @override
   void dispose() {
@@ -64,7 +66,7 @@ class _LoginPageState extends LoginViewImpl {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 47),
+                    padding: EdgeInsets.only(left: MediaQuery.of(context).size.width*marginLeft, right: MediaQuery.of(context).size.width*marginRigth),
                     child: Align(
                         alignment: Alignment.bottomLeft,
                         child: Text(
@@ -74,8 +76,7 @@ class _LoginPageState extends LoginViewImpl {
                         )),
                   ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(
-                        vertical: 10, horizontal: 47),
+                    padding: EdgeInsets.only(left: MediaQuery.of(context).size.width*marginLeft, right: MediaQuery.of(context).size.width*marginRigth, top: 10, bottom: 10),
                     child: TextFormField(
                       validator: Validatorless.multiple([
                         Validatorless.required('Obrigatório'),
@@ -101,7 +102,7 @@ class _LoginPageState extends LoginViewImpl {
                   ),
                   Padding(
                     padding:
-                        const EdgeInsets.only(left: 47, right: 47, top: 13),
+                        EdgeInsets.only(left: MediaQuery.of(context).size.width*marginLeft, right: MediaQuery.of(context).size.width*marginRigth, top: 13,),
                     child: Align(
                         alignment: Alignment.bottomLeft,
                         child: Text(
@@ -111,8 +112,7 @@ class _LoginPageState extends LoginViewImpl {
                         )),
                   ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(
-                        vertical: 10, horizontal: 47),
+                    padding: EdgeInsets.only(left: MediaQuery.of(context).size.width*marginLeft, right: MediaQuery.of(context).size.width*marginRigth, top: 10, bottom: 10),
                     child: TextFormField(
                       validator: Validatorless.multiple([
                         Validatorless.required("Obrigatório"),
@@ -139,7 +139,7 @@ class _LoginPageState extends LoginViewImpl {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 47),
+                    padding:  EdgeInsets.only(left: MediaQuery.of(context).size.width*marginLeft),
                     child: Align(
                       alignment: Alignment.bottomLeft,
                       child: Text.rich(
@@ -164,7 +164,7 @@ class _LoginPageState extends LoginViewImpl {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 47, vertical: 25),
+              padding: EdgeInsets.only(left: MediaQuery.of(context).size.width*marginLeft, right: MediaQuery.of(context).size.width*marginRigth, top: 25, bottom: 25),
               child: ElevatedButton(
                 onPressed: () {
                   final validForm =
