@@ -24,7 +24,7 @@ class _DocsSecondPageState extends DocsSecondPageViewImpl {
   final registrationNumerEC = TextEditingController();
   final formKey = GlobalKey<FormState>();
   final double marginLeft = 0.1;
-  final double marginRigth = 0.13;
+  final double marginRight = 0.13;
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +44,7 @@ class _DocsSecondPageState extends DocsSecondPageViewImpl {
                   padding: EdgeInsets.only(
                       top: 20,
                       left: MediaQuery.of(context).size.width * marginLeft,
-                      right: MediaQuery.of(context).size.width * marginRigth,
+                      right: MediaQuery.of(context).size.width * marginRight,
                       bottom: 5),
                   child: Text(
                     'A administração da UFCG precisa validar os seus documentos para permitir o seu cadastro na plataforma.',
@@ -57,7 +57,7 @@ class _DocsSecondPageState extends DocsSecondPageViewImpl {
                   padding: EdgeInsets.only(
                       top: 25,
                       left: MediaQuery.of(context).size.width * marginLeft,
-                      right: MediaQuery.of(context).size.width * marginRigth,
+                      right: MediaQuery.of(context).size.width * marginRight,
                       bottom: 5),
                   child: Text(
                     'Seu comprovante de matricula',
@@ -70,7 +70,7 @@ class _DocsSecondPageState extends DocsSecondPageViewImpl {
                   padding: EdgeInsets.only(
                       top: 5,
                       left: MediaQuery.of(context).size.width * marginLeft,
-                      right: MediaQuery.of(context).size.width * marginRigth,
+                      right: MediaQuery.of(context).size.width * marginRight,
                       bottom: 50),
                   child: Text(
                     'Se você for aluno(a), envie um documento que comprove o seu vínculo ativo com a universidade.',
@@ -82,7 +82,7 @@ class _DocsSecondPageState extends DocsSecondPageViewImpl {
                 Padding(
                   padding: EdgeInsets.only(
                       left: MediaQuery.of(context).size.width * marginLeft,
-                      right: MediaQuery.of(context).size.width * marginRigth),
+                      right: MediaQuery.of(context).size.width * marginRight),
                   child: Align(
                       alignment: Alignment.bottomLeft,
                       child: Text(
@@ -94,7 +94,7 @@ class _DocsSecondPageState extends DocsSecondPageViewImpl {
                 Padding(
                   padding: EdgeInsets.only(
                       left: MediaQuery.of(context).size.width * marginLeft,
-                      right: MediaQuery.of(context).size.width * marginRigth,
+                      right: MediaQuery.of(context).size.width * marginRight,
                       top: 10,
                       bottom: 10),
                   child: TextFormField(
@@ -124,7 +124,7 @@ class _DocsSecondPageState extends DocsSecondPageViewImpl {
                 Padding(
                   padding: EdgeInsets.only(
                       left: MediaQuery.of(context).size.width * marginLeft,
-                      right: MediaQuery.of(context).size.width * marginRigth,
+                      right: MediaQuery.of(context).size.width * marginRight,
                       top: 10),
                   child: Align(
                       alignment: Alignment.bottomLeft,
@@ -137,7 +137,7 @@ class _DocsSecondPageState extends DocsSecondPageViewImpl {
                 Padding(
                   padding: EdgeInsets.only(
                       left: MediaQuery.of(context).size.width * marginLeft,
-                      right: MediaQuery.of(context).size.width * marginRigth,
+                      right: MediaQuery.of(context).size.width * marginRight,
                       top: 10),
                   child: ElevatedButton(
                       onPressed: () {},
@@ -155,7 +155,7 @@ class _DocsSecondPageState extends DocsSecondPageViewImpl {
                 Padding(
                   padding: EdgeInsets.only(
                       left: MediaQuery.of(context).size.width * marginLeft,
-                      right: MediaQuery.of(context).size.width * marginRigth,
+                      right: MediaQuery.of(context).size.width * marginRight,
                       top: 25,
                       bottom: 25),
                   child: ElevatedButton(

@@ -147,7 +147,7 @@ class _RedefinePasswordPageState extends RedefinePasswordViewImpl {
                   left: MediaQuery.of(context).size.width * marginLeft),
               child: ElevatedButton(
                 onPressed: () {
-                  //Navigator.of(context).pushNamed('confirmReqRedefinePassword');
+                  Navigator.of(context).pushNamed('confirmRedefinitionPassword');
                   //TODO enviar email
                 },
                 style: ButtonStyles.instance.primaryButton,

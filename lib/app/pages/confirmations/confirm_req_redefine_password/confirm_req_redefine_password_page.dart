@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../core/ui/styles/button_styles.dart';
 import '../../../core/ui/styles/text_styles.dart';
+import '../../../core/ui/widgets/button_go_to_courts_page_widget.dart';
 
 class ConfirmReqRedefinePasswordPage extends StatelessWidget {
   const ConfirmReqRedefinePasswordPage({Key? key}) : super(key: key);
@@ -59,19 +60,9 @@ class ConfirmReqRedefinePasswordPage extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: EdgeInsets.symmetric(
-                horizontal: MediaQuery.of(context).size.width * 0.12),
-            child: ElevatedButton(
-              onPressed: () {
-                //TODO redirecionar para quadras
-              },
-              style: ButtonStyles.instance.secondaryButton,
-              child: Text(
-                '👀 Dar uma olhadinha nas quadras',
-                style: TextStyles.instance.textTitleButton,
-              ),
-            ),
-          ),
+              padding: EdgeInsets.symmetric(
+                  horizontal: MediaQuery.of(context).size.width * 0.12),
+              child: const ButtonGoToCourtsPageWidget()),
         ],
       ),
     ));
