@@ -18,6 +18,14 @@ class ButtonStyles {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
       textStyle: TextStyles.instance.textTitleButton.copyWith(fontSize: 16));
 
+  ButtonStyle get primaryButtonMenu => ElevatedButton.styleFrom(
+      backgroundColor: ColorsApp.instance.primary,
+      minimumSize: const Size(180, 50),
+      shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(15), bottomLeft: Radius.circular(15))),
+      textStyle: TextStyles.instance.textTitleButton.copyWith(fontSize: 16));
+
   ButtonStyle get transparentButton => ElevatedButton.styleFrom(
       elevation: 0,
       minimumSize: const Size(0, 50),

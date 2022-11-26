@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:joga_mais_ufcg/app/core/ui/styles/button_styles.dart';
 import 'package:joga_mais_ufcg/app/core/ui/styles/text_styles.dart';
+import 'package:joga_mais_ufcg/app/core/ui/widgets/button_go_to_courts_page_widget.dart';
 
 import 'package:joga_mais_ufcg/app/pages/splash/presenter/splash_presenter.dart';
 import 'package:joga_mais_ufcg/app/pages/splash/view/splash_view_impl.dart';
@@ -61,16 +62,7 @@ class _SplashPageState extends SplashViewImpl {
               Padding(
                 padding: EdgeInsets.symmetric(
                     horizontal: MediaQuery.of(context).size.width * 0.12),
-                child: ElevatedButton(
-                  onPressed: () {
-                    //TODO redirecionar para quadras
-                  },
-                  style: ButtonStyles.instance.secondaryButton,
-                  child: Text(
-                    '👀 Dar uma olhadinha nas quadras',
-                    style: TextStyles.instance.textTitleButton,
-                  ),
-                ),
+                child: const ButtonGoToCourtsPageWidget(),
               ),
               Padding(
                 padding: EdgeInsets.symmetric(

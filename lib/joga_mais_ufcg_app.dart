@@ -28,8 +28,8 @@ class JogaMaisUfcgApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: ThemeConfig.theme,
         routes: {
-          //'/': (_) => const SplashRoute(),
-          '/': (_) => const AllCourtRoute(),
+          '/': (_) => const SplashRoute(),
+          '/allCourts': (_) => const AllCourtRoute(),
           '/confirmRedefinitionPassword': (_) => const ConfirmRedefinitionPassword(),
           '/redefinePassword': (_) => const RedefinePasswordRoute(),
           '/confirmReqRedefinePassword': (_) => const ConfirmReqRedefinePasswordPage(),
