@@ -17,6 +17,7 @@ class ColorsApp {
   Color get greyText => const Color(0xFFC8C8C8);
   Color get red => const Color(0xFFCB6060);
   Color get greyInputText => const Color(0xFFBEBEBE);
+  Color get backButton => const Color(0xFF233043);
 }
 
 extension ColorAppExtension on BuildContext {
