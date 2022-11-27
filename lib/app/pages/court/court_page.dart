@@ -27,10 +27,7 @@ class CourtPage extends StatelessWidget {
           ),
           width: 50,
           height: 50,
-          child: IconButton(
-            icon: const Icon(Icons.arrow_back, color: Colors.white),
-            onPressed: () => Navigator.of(context).pop(),
-          ),
+          child: const BackButton()
         ),
         centerTitle: true,
       ),

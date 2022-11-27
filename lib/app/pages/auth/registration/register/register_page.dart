@@ -2,15 +2,15 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:joga_mais_ufcg/app/core/ui/widgets/text_rich_login.dart';
 
-import 'package:joga_mais_ufcg/app/pages/auth/register/presenter/register_presenter.dart';
-import 'package:joga_mais_ufcg/app/pages/auth/register/presenter/register_presenter_impl.dart';
-import 'package:joga_mais_ufcg/app/pages/auth/register/view/register_view_impl.dart';
+import 'package:joga_mais_ufcg/app/pages/auth/registration/register/presenter/register_presenter.dart';
+import 'package:joga_mais_ufcg/app/pages/auth/registration/register/presenter/register_presenter_impl.dart';
+import 'package:joga_mais_ufcg/app/pages/auth/registration/register/view/register_view_impl.dart';
 import 'package:validatorless/validatorless.dart';
 
-import '../../../core/ui/styles/button_styles.dart';
-import '../../../core/ui/styles/colors_app.dart';
-import '../../../core/ui/styles/text_styles.dart';
-import '../../../core/ui/widgets/text_rich_register.dart';
+import '../../../../core/ui/styles/button_styles.dart';
+import '../../../../core/ui/styles/colors_app.dart';
+import '../../../../core/ui/styles/text_styles.dart';
+import '../../../../core/ui/widgets/text_rich_register.dart';
 
 class RegisterPage extends StatefulWidget {
   final RegisterPresenter presenter;
