@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:joga_mais_ufcg/app/core/ui/styles/text_styles.dart';
 import 'package:joga_mais_ufcg/app/core/ui/widgets/text_rich_login.dart';
-import 'package:joga_mais_ufcg/app/pages/docs/docssecondpage/presenter/docs_second_page_presenter.dart';
+import 'package:joga_mais_ufcg/app/pages/auth/registration/docs/docssecondpage/presenter/docs_second_page_presenter.dart';
 
-import 'package:joga_mais_ufcg/app/pages/docs/docssecondpage/view/docs_second_page_view_impl.dart';
+import 'package:joga_mais_ufcg/app/pages/auth/registration/docs/docssecondpage/view/docs_second_page_view_impl.dart';
 import 'package:validatorless/validatorless.dart';
 
-import '../../../core/ui/styles/button_styles.dart';
+import '../../../../../core/ui/styles/button_styles.dart';
 
 class DocsSecondPage extends StatefulWidget {
   final DocsSecondPagePresenter presenter;

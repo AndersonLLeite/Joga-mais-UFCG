@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:joga_mais_ufcg/app/core/ui/styles/button_styles.dart';
 import 'package:joga_mais_ufcg/app/core/ui/styles/text_styles.dart';
 import 'package:joga_mais_ufcg/app/core/ui/widgets/court_list_widget.dart';
+import 'package:joga_mais_ufcg/app/models/court/court.dart';
 
 import 'package:joga_mais_ufcg/app/pages/all_court/presenter/all_court_presenter.dart';
 import 'package:joga_mais_ufcg/app/pages/all_court/view/all_court_view_impl.dart';
@@ -18,6 +19,16 @@ class AllCourtPage extends StatefulWidget {
 }
 
 class _AllCourtPageState extends AllCourtViewImpl {
+  final Court court = Court(
+      exclusivity: true,
+      title: 'Quadra de Tênis',
+      image: '/assets/images/court_image.png',
+      description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pellentesque fermentum egestas, Mauris fringilla.",
+      businessHour: "Abre às 8h30, fecha às 17h",
+      scheddulingDuration: "1h30 de duração do agendamento");
+
+
   final searchCourtEC = TextEditingController();
   final formKey = GlobalKey<FormState>();
   double marginLeft = 0.1;
